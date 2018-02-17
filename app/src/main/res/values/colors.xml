@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>-->
+    <color name="colorPrimary">@color/cinnabar</color>
+    <color name="colorPrimaryDark">@color/cinnabar</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--红色-->
+    <color name="silverBegonia">#F52443</color> <!-- 银星海棠 -->
+    <color name="eosin">#E60039</color>         <!-- 曙红 -->
+    <color name="roseRed">#E10B2B</color>       <!-- 月季红 -->
+    <color name="bananaRed">#D70419</color>     <!-- 蕉红 -->
+    <color name="orangeRed">#FF441A</color>     <!-- 桔红 -->
+    <color name="JasmineRed">#CC0033</color>    <!-- 茉莉花红 -->
+    <color name="scarlet">#CC0000</color>       <!-- 猩红 -->
+    <color name="wuluosongRed">#C80926</color>  <!-- 乌罗松红 -->
+    <color name="tomatoRed">#C70024</color>     <!-- 番茄红 -->
+    <color name="brilliantRed">#BF0417</color>  <!-- 艳红 -->
+    <color name="ivoryRed">#B30000</color>      <!-- 象牙红 -->
+    <color name="cinnabar">#CE3B3B</color>      <!-- 辰砂 -->
+    <color name="earthRed">#BC2E2E</color>      <!-- 土红 -->
+    <color name="durianRed">#B02502</color>     <!-- 榴花红 -->
+
+</resources>
