@@ -1,20 +1,20 @@
 package com.wengjianfeng.bingpicture;
 
-import android.service.notification.StatusBarNotification;
+import android.graphics.Color;
+import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
     Toolbar mToolbar;
     @BindView(R.id.right_drawer_recyclerView)
     RecyclerView mRecyclerView;
-    @BindView(R.id.left_drawer_listView)
-    ListView mListView;
+    @BindView(R.id.left_drawer_navigationView)
+    NavigationView mNavigationView;
     @BindView(R.id.drawer)
     DrawerLayout mDrawerLayout;
     private PictureAdapter mPictureAdapter;
@@ -43,14 +43,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        mToolbar.setNavigationIcon(R.mipmap.ic_launcher);
 //        setSupportActionBar(mToolbar);
+
         mDataList = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             String url = AppConstants.BASE_URL + String.format(pictureListPath, i);
-            if (i == 3)
-//                url="https://bing.ioliu.cn/v1/blur?d=3&w=1054&h=283&r=0";
-                Logger.d(TAG + "------url:" + url);
+            Logger.d(TAG + "------url:" + url);
             mDataList.add(url);
         }
         mPictureAdapter = new PictureAdapter(R.layout.item_picture, mDataList);
@@ -63,6 +61,11 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "onItemClick: adapter click");
             }
         });
+        //设置DrawerLayout
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, mDrawerLayout, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        mDrawerLayout.setDrawerListener(toggle);
+        toggle.syncState();
 
     }
 }

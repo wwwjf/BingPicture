@@ -6,7 +6,6 @@
     <color name="colorPrimary">@color/cinnabar</color>
     <color name="colorPrimaryDark">@color/cinnabar</color>
     <color name="colorAccent">#FF4081</color>
-
     <!--红色-->
     <color name="silverBegonia">#F52443</color> <!-- 银星海棠 -->
     <color name="eosin">#E60039</color>         <!-- 曙红 -->
